@@ -8,18 +8,32 @@
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
-	font-size: 125%
+	font-size: 125%;
+	max-width: 100%;
+	color: white
 }
 .title {
 	font-family: 'Montserrat', sans-serif
 }
 input {
-	width: 80%;
-	height: 50px;
+	width: 300px;
+	height: 50px; 
 	font-family: 'Montserrat', sans-serif;
-	font-size: 130%;
+	font-size: 120%;
 	text-align: center
 }
 .text {
 	font-size: 125%
+}
+
+.form {
+	width: 100%
+}
+
+body {
+	background-image: url('https://th.bing.com/th/id/Rba5b613b625e1013284f588943cd6e15?rik=DbO%2bQvmA6tUFUw&riu=http%3a%2f%2fjustfunfacts.com%2fwp-content%2fuploads%2f2017%2f01%2fsnow.gif&ehk=2hn9cY6DBFuxL%2f168YMbP4J13I5wh0hP5uzmCMb3l5c%3d&risl=&pid=ImgRaw');
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
