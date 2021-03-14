@@ -1,32 +1,6 @@
 <html>
 <head>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-		.all {
-			text-align: center;
-			font-family: 'Roboto Mono', sans-serif;
-			position: absolute;
-			top: 38%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%, -50%);
-			font-size: 125%
-		}
-		.title {
-			font-family: 'Montserrat', sans-serif
-		}
-		input {
-			width: 80%;
-			height: 50px;
-			font-family: 'Montserrat', sans-serif;
-			font-size: 130%;
-			text-align: center
-		}
-		.text {
-			font-size: 125%
-		}
-	</style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 
 <body>
