@@ -1,8 +1,30 @@
 <html>
 <head>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 		.all {
+			text-align: center;
+			font-family: 'Roboto Mono', sans-serif;
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			font-size: 125%
+		}
+		.title {
+			font-family: 'Montserrat', sans-serif
+		}
+		input {
+			width: 80%;
+			height: 50px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 130%;
 			text-align: center
+		}
+		.text {
+			font-size: 125%
 		}
 	</style>
 </head>
@@ -13,12 +35,14 @@
 			<form action='#' method='post'>
 				<div class="prefix">
 					<h1 class="title">Snowflake ID</h1>
-					<input type="text" name='id'>
+					<input type="text" name='id' placeholder="ex. 475315771086602241">
 				</div>
 			</form>
 		</div>
-		<h4>Created At: {{created_at}}</h4>
-		<h4>Timestamp: {{timestamp}}</h4>
+		<div class="text">
+			<h4>Created At: {{created_at}}</h4>
+			<h4>Timestamp: {{timestamp}}</h4>
+		</div>
 	</div>
 </body>
 </html>
