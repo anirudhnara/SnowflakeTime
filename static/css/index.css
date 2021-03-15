@@ -20,14 +20,16 @@ input {
 	height: 50px; 
 	font-family: 'Montserrat', sans-serif;
 	font-size: 120%;
-	text-align: center
+	text-align: center;
+	border-radius: 10px;
+	border: 3px solid #0b7dd8
 }
 .text {
 	font-size: 125%
 }
 
 .form {
-	width: 100%
+	width: 100%;
 }
 
 body {
