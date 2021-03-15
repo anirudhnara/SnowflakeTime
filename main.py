@@ -9,11 +9,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=["POST", "GET"])
 def home():
-	
 	if request.method == "POST":
 		try:
 			snowflake_id = request.form["id"]
-			created_at = f'{datetime.datetime.strftime(snowflake_time(int(snowflake_id)), "%A, %B %-d, %Y, %-I:%M %p")} UTC'
+			created_at = f'{datetime.datetime.strftime(snowflake_time(int(snowflake_id)), "%A, %B %-d, %Y, %-I:%M:%S %p")} UTC'
 			timestamp = round(time.mktime(snowflake_time(int(snowflake_id)).timetuple()))
 			iso = snowflake_time(int(snowflake_id))
 			return render_template("index.html", created_at=created_at, timestamp=timestamp, iso=iso)
