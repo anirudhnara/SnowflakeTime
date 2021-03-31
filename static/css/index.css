@@ -64,8 +64,13 @@ body {
 	width: 200px;
 	border-radius: 15px;
 	height: 82px;
+	transition: all 100ms ease-out;
 }
 
+.discord:hover {
+    box-shadow: 0px 0px 25px #000;
+    transition-duration: 100ms;
+}
 
 .server {
 	vertical-align: middle;
