@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect
-import discord
 from discord.utils import snowflake_time
 import datetime
-import requests
 import time
 
 app = Flask(__name__)
@@ -15,9 +13,16 @@ def home():
 			created_at = f'{datetime.datetime.strftime(snowflake_time(int(snowflake_id)), "%A, %B %-d, %Y, %-I:%M:%S %p")} UTC'
 			timestamp = round(time.mktime(snowflake_time(int(snowflake_id)).timetuple()))
 			iso = snowflake_time(int(snowflake_id))
-			return render_template("index.html", created_at=created_at, timestamp=timestamp, iso=iso)
+			return redirect(f"https://www.snowflake-time.tk/?id={request.form['id']}") 
 		except:
-			return redirect('https://snowflaketime.mythify.repl.co/')
+			return redirect("https://www.snowflake-time.tk/")
+	
+	if request.args.get("id"):
+		snowflake_id = request.args.get("id")
+		created_at = f'{datetime.datetime.strftime(snowflake_time(int(snowflake_id)), "%A, %B %-d, %Y, %-I:%M:%S %p")} UTC'
+		timestamp = round(time.mktime(snowflake_time(int(snowflake_id)).timetuple()))
+		iso = snowflake_time(int(snowflake_id))
+		return render_template("index.html", created_at=created_at, timestamp=timestamp, iso=iso)
 	
 	return render_template("index.html")
 
