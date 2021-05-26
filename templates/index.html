@@ -1,6 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/copy.js') }}"></script>
 	<link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/hflzqaT54aVEw7knzzAj6rZZiq5XvQla3OfoVy7jECZfO1JjuvKsnVGnp5Yua9witsuumU_rK3HWAs3ANdF9oolb5s4T10U">
 	<title>Discord Snowflake ID</title>
 </head>
@@ -9,15 +10,15 @@
 	<div class="discord">
 		<div class="disc-items">
 			<img class="discord-logo" src="https://dl1.cbsistatic.com/i/2017/05/19/dbb2f05e-10b1-4b32-af4c-092750d9295f/e5e4c1645483e6e5c844bf51cbf8ef5a/imgingest-5584774967869121627.png" alt="Discord Logo">
-			<a class="server" href="https://dsc.gg/mythify" target="_blank">Discord Server</a>
+			<a class="server" href="https://dsc.gg/techywiki" target="_blank">Discord Server</a>
 		</div>
 	</div>
 	<div class="all">
 		<div class="form">
-			<form action='#' method='post'>
+			<form action='' method='post'>
 				<div class="prefix">
 					<h1 class="title">❄ Discord Snowflake ID ❄</h1>
-					<input type="text" name='id' placeholder="ex. 475315771086602241">
+					<input type="text" name='id' placeholder="ex. 475315771086602241" class="form-input">
 				</div>
 			</form>
 		</div>
@@ -25,6 +26,7 @@
 			<h4 class="desc-text">Created At: {{created_at}}</h4>
 			<h4 class="desc-text">Timestamp: {{timestamp}}</h4>
 			<h4 class="desc-text">ISO 8601: {{iso}}</h4>
+			<input id="url" onclick="copyText()" value="{{share_url}}" label="text" readonly>
 		</div>
 	</div>
 </body>
